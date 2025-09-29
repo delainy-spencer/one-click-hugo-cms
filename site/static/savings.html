@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Monthly Savings Calculator</title>
+</head>
+<body>
+  <h2>Monthly Savings Calculator</h2>
+  <p>Enter your income and expenses to see how much you can save.</p>
+  
+  <label>Monthly Income: $<input type="number" id="income"></label><br><br>
+  <label>Monthly Expenses: $<input type="number" id="expenses"></label><br><br>
+  
+  <button onclick="calculateSavings()">Calculate</button>
+  
+  <h3 id="result"></h3>
+  
+  <script>
+    function calculateSavings() {
+      let income = parseFloat(document.getElementById("income").value) || 0;
+      let expenses = parseFloat(document.getElementById("expenses").value) || 0;
+      let savings = income - expenses;
+      document.getElementById("result").innerText = 
+        savings >= 0 ? `You can save $${savings.toFixed(2)} this month.` 
+                     : `You're overspending by $${Math.abs(savings).toFixed(2)}.`;
+    }
+  </script>
+</body>
+</html>
