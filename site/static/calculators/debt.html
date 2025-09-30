@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debt Snowball vs Debt Avalanche Calculator</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: 20px auto; padding: 10px; background: #f9f9f9; }
+    h1, h2 { text-align: center; }
+    input[type="number"], input[type="text"] { padding: 5px; margin: 5px; width: 120px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    table, th, td { border: 1px solid #ccc; }
+    th, td { padding: 8px; text-align: center; }
+    .debt-row { display: flex; gap: 10px; margin-bottom: 5px; flex-wrap: wrap; }
+    .btn { padding: 10px 15px; margin: 10px 0; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 5px; }
+</style>
+</head>
+<body>
+
+<h1>Debt Snowball vs Debt Avalanche Calculator</h1>
+<p>Enter your debts and minimum payments. Add extra payment beyond minimums for faster payoff.</p>
+
+<div id="debts-container"></div>
+<button class="btn" onclick="addDebt()">Add Debt</button>
+<br>
+<button class="btn" onclick="calculate()">Calculate Payoff</button>
+
+<h2>Results</h2>
+<div id="results"></div>
+
+<h2>Payoff Comparison Chart</h2>
+<canvas id="debtChart" width="800" height="400"></canvas>
+
+<script>
+let debts = [];
+
+function addDebt() {
+    const container = document.getElementById('debts-container');
+    const div = document.createElement('div');
+    div.className = 'debt-row';
+    div.innerHTML = `
+        <input type="text" placeholder="Debt Name" class="debt-name">
+        <input type="number" placeholder="Balance" class="debt-balance" min="0">
+        <input type="number" placeholder="Interest %" class="debt-interest" min="0" step="0.01">
+        <input type="number" placeholder="Min Payment" class="debt-min" min="0" step="0.01">
+        <button onclick="removeDebt(this)">Remove</button>
+    `;
+    container.appendChild(div);
+}
+
+function removeDebt(button) { button.parentElement.remove(); }
+
+function calculate() {
+    debts = [];
+    const names = document.querySelectorAll('.debt-name');
+    const balances = document.querySelectorAll('.debt-balance');
+    const interests = document.querySelectorAll('.debt-interest');
+    const mins = document.querySelectorAll('.debt-min');
+
+    for (let i = 0; i < names.length; i++) {
+        const name = names[i].value;
+        const balance = parseFloat(balances[i].value);
+        const interest = parseFloat(interests[i].value);
+        const minPayment = parseFloat(mins[i].value);
+        if (name && balance > 0 && interest >= 0 && minPayment > 0) {
+            debts.push({name, balance, interest, minPayment, remaining: balance});
+        }
+    }
+
+    if (debts.length === 0) { alert('Please enter at least one debt with minimum payments.'); return; }
+
+    const extraPayment = parseFloat(prompt("Enter extra monthly payment beyond minimums:", "100")) || 0;
+
+    const snowballResult = simulateDebt([...debts], extraPayment, 'snowball');
+    const avalancheResult = simulateDebt([...debts], extraPayment, 'avalanche');
+
+    displayResults(snowballResult, avalancheResult);
+    displayChart(snowballResult.monthlyBalances, avalancheResult.monthlyBalances);
+}
+
+function simulateDebt(debts, extraPayment, method) {
+    let month = 0;
+    const monthlyBalances = [];
+    debts = debts.map(d => ({...d, remaining: d.balance}));
+    
+    while (debts.some(d => d.remaining > 0)) {
+        month++;
+        // Apply interest
+        debts.forEach(d => {
+            if (d.remaining > 0) {
+                d.remaining += d.remaining * (d.interest / 100 / 12);
+            }
+        });
+
+        let targetDebt;
+        if (method === 'snowball') {
+            targetDebt = debts.filter(d => d.remaining > 0).sort((a,b)=>a.remaining-b.remaining)[0];
+        } else {
+            targetDebt = debts.filter(d => d.remaining > 0).sort((a,b)=>b.interest-a.interest)[0];
+        }
+
+        const totalMinPayments = debts.reduce((sum,d)=>sum + (d.remaining>0?d.minPayment:0), 0);
+        const payment = totalMinPayments + extraPayment;
+
+        targetDebt.remaining -= payment;
+        if (targetDebt.remaining < 0) targetDebt.remaining = 0;
+
+        monthlyBalances.push(debts.map(d => d.remaining.toFixed(2)));
+    }
+
+    return {months: month, monthlyBalances};
+}
+
+function displayResults(snowball, avalanche) {
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = `
+        <table>
+            <tr>
+                <th>Method</th>
+                <th>Months to Payoff</th>
+            </tr>
+            <tr>
+                <td>Debt Snowball</td>
+                <td>${snowball.months}</td>
+            </tr>
+            <tr>
+                <td>Debt Avalanche</td>
+                <td>${avalanche.months}</td>
+            </tr>
+        </table>
+    `;
+}
+
+function displayChart(snowballBalances, avalancheBalances) {
+    const ctx = document.getElementById('debtChart').getContext('2d');
+    const labels = Array.from({length: snowballBalances.length}, (_,i)=>i+1);
+    const debtNames = debts.map(d=>d.name);
+
+    const snowballDatasets = debtNames.map((name,index)=>({
+        label: name + ' (Snowball)',
+        data: snowballBalances.map(m=>m[index]),
+        borderWidth: 2,
+        borderColor: `hsl(${index*60},70%,50%)`,
+        fill: false
+    }));
+
+    const avalancheDatasets = debtNames.map((name,index)=>({
+        label: name + ' (Avalanche)',
+        data: avalancheBalances.map(m=>m[index]),
+        borderWidth: 2,
+        borderDash: [5,5],
+        borderColor: `hsl(${index*60},50%,40%)`,
+        fill: false
+    }));
+
+    if (window.debtChartInstance) window.debtChartInstance.destroy();
+
+    window.debtChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels,
+            datasets: [...snowballDatasets, ...avalancheDatasets]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: { display: true, text: 'Debt Payoff Timeline (Snowball vs Avalanche)' },
+                legend: { position: 'bottom' }
+            },
+            scales: { y: { title: { display: true, text: 'Remaining Balance ($)' } }, x: { title: { display: true, text: 'Month' } } }
+        }
+    });
+}
+</script>
+
+</body>
+</html>
