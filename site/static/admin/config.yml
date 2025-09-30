@@ -104,3 +104,7 @@ collections: # A list of collections the CMS should be able to edit
                 name: images
                 widget: list
                 field: { label: Image, name: image, widget: image }
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
