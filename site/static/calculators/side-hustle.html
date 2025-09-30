@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Calculate your true side-hustle hourly rate (after expenses & taxes) and get tips to charge more. Includes quick resources and affiliate tools for freelancers." />
+  <title>Side Hustle Hourly Rate Calculator</title>
+  <style>
+    :root{--accent:#6c63ff;--muted:#6b7280;--card:#ffffff;--bg:#f7f7fc}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.45;background:var(--bg);color:#0f172a;margin:0;padding:24px}
+    .container{max-width:900px;margin:0 auto}
+    header{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+    header h1{font-size:1.5rem;margin:0}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(15,23,42,0.06);}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    label{display:block;font-size:0.85rem;color:var(--muted);margin-bottom:6px}
+    input[type="number"], input[type="text"], select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9f2;font-size:1rem}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;border:none;font-weight:600;cursor:pointer}
+    .results{margin-top:14px;padding:12px;border-radius:10px;background:#fbfbff;border:1px solid rgba(108,99,255,0.08)}
+    .small{font-size:0.9rem;color:var(--muted)}
+    .resources{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+    .resource{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:10px;background:#fff;border:1px solid #eef2ff}
+    .resource a{color:var(--accent);font-weight:600;text-decoration:none}
+    footer{margin-top:24px;font-size:0.9rem;color:var(--muted)}
+    @media (max-width:720px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="card" style="padding:10px;display:flex;align-items:center;gap:12px">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+          <rect width="24" height="24" rx="6" fill="#6c63ff"></rect>
+          <path d="M7 13h10M7 9h10M7 17h6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h1>Side Hustle Hourly Rate Calculator</h1>
+      </div>
+    </header>
+
+    <main class="card">
+      <p class="small">Use this calculator to find your <strong>true hourly rate</strong> from your side hustle after expenses and taxes. Enter the period you tracked (e.g., a month) and the totals from that period.</p>
+
+      <form id="calcForm" onsubmit="return false;" aria-label="Side hustle hourly rate calculator">
+        <div class="grid" style="margin-top:12px">
+          <div>
+            <label for="gross">Total gross earnings (period)</label>
+            <input type="number" id="gross" min="0" step="0.01" placeholder="e.g. 1200" required>
+          </div>
+
+          <div>
+            <label for="hours">Total hours worked (period)</label>
+            <input type="number" id="hours" min="0" step="0.1" placeholder="e.g. 45" required>
+          </div>
+
+          <div>
+            <label for="expenses">Total business expenses (period)</label>
+            <input type="number" id="expenses" min="0" step="0.01" placeholder="equipment, subscriptions, supplies">
+          </div>
+
+          <div>
+            <label for="taxRate">Estimated tax rate (%)</label>
+            <input type="number" id="taxRate" min="0" max="100" step="0.1" placeholder="e.g. 20">
+          </div>
+
+          <div>
+            <label for="platformFees">Platform / payment fees (flat)</label>
+            <input type="number" id="platformFees" min="0" step="0.01" placeholder="e.g. 30">
+          </div>
+
+          <div>
+            <label for="desiredRate">Desired hourly rate (optional)</label>
+            <input type="number" id="desiredRate" min="0" step="0.01" placeholder="what you'd like to charge">
+          </div>
+        </div>
+
+        <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+          <button class="btn" id="calculate">Calculate</button>
+          <button type="button" id="resetBtn" style="background:#eef2ff;color:var(--accent);border-radius:10px;padding:10px 14px;border:none;cursor:pointer">Reset</button>
+        </div>
+
+        <div class="results" id="results" style="display:none" aria-live="polite">
+          <div id="netIncomeText"></div>
+          <div id="hourlyText" style="font-size:1.2rem;font-weight:700;margin-top:6px"></div>
+          <div id="compareText" class="small" style="margin-top:8px"></div>
+        </div>
+      </form>
+
+      <section class="small" style="margin-top:14px">
+        <h3 style="margin:0 0 8px 0">Quick tips</h3>
+        <ul>
+          <li>Track every minute: small gaps add up — use a time tracker to capture real hours worked.</li>
+          <li>Include all costs (subscriptions, shipping, transaction fees) when calculating expenses.</li>
+          <li>If your net hourly rate is lower than your desired wage, raise your prices, cut expenses, or limit unpaid time.</li>
+        </ul>
+      </section>
+
+      <aside class="resources" aria-label="Recommended tools">
+        <div class="resource">
+          <div>
+            <div style="font-weight:700">Toggl — Time tracking made simple</div>
+            <div class="small">See where your hours actually go so you can charge the right rate.</div>
+          </div>
+          <div><a href="AFF_LINK_TOGGL" target="_blank" rel="noopener">Try Toggl →</a></div>
+        </div>
+
+        <div class="resource">
+          <div>
+            <div style="font-weight:700">FreshBooks — Easy invoicing & accounting</div>
+            <div class="small">Invoice clients, track expenses, and get paid faster.</div>
+          </div>
+          <div><a href="AFF_LINK_FRESHBOOKS" target="_blank" rel="noopener">Start Free Trial →</a></div>
+        </div>
+
+        <div class="resource">
+          <div>
+            <div style="font-weight:700">Find gigs — Fiverr & FlexJobs</div>
+            <div class="small">Looking for more clients? Browse vetted listings to scale your side income.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <a href="AFF_LINK_FIVERR" target="_blank" rel="noopener">Fiverr →</a>
+            <a href="AFF_LINK_FLEXJOBS" target="_blank" rel="noopener">FlexJobs →</a>
+          </div>
+        </div>
+      </aside>
+
+      <footer>
+        <p class="small">Want this as a printable worksheet or downloadable Google Sheet? <a href="#" style="color:var(--accent);font-weight:600;text-decoration:none">Download the free worksheet</a> (coming soon).</p>
+      </footer>
+    </main>
+
+  </div>
+
+  <script>
+    const $ = id => document.getElementById(id);
+    function money(x){return Number(x).toLocaleString(undefined,{style:'currency',currency:'USD',maximumFractionDigits:2})}
+
+    function calculate(){
+      const gross = parseFloat($('gross').value) || 0;
+      const hours = parseFloat($('hours').value) || 0;
+      const expenses = parseFloat($('expenses').value) || 0;
+      const taxRate = parseFloat($('taxRate').value) || 0;
+      const platformFees = parseFloat($('platformFees').value) || 0;
+      const desired = parseFloat($('desiredRate').value) || 0;
+
+      const taxes = (taxRate/100) * gross;
+      const netIncome = gross - expenses - taxes - platformFees;
+      const effectiveHourly = hours > 0 ? (netIncome / hours) : 0;
+
+      $('results').style.display = 'block';
+      $('netIncomeText').innerHTML = `<strong>Net income for period:</strong> ${money(netIncome > 0 ? netIncome : 0)}`;
+      $('hourlyText').textContent = netIncome > 0 && hours>0 ? `${money(effectiveHourly)} / hour (net)` : 'Enter earnings and hours to see your hourly rate.';
+
+      if(desired>0 && hours>0){
+        const needed = desired * hours; // what you'd need net
+        const diff = needed - netIncome;
+        if(diff<=0){
+          $('compareText').textContent = `Nice! Your current net income already meets or exceeds your desired hourly wage of ${money(desired)}.`;
+        } else {
+          const extraPerHour = diff / hours;
+          $('compareText').textContent = `To hit ${money(desired)} / hour, you need an extra ${money(extraPerHour)} per hour (or ${money(diff)} total this period). Consider raising prices, reducing costs, or charging for previously unpaid tasks.`;
+        }
+      } else {
+        $('compareText').textContent = '';
+      }
+    }
+
+    $('calculate').addEventListener('click', calculate);
+    $('resetBtn').addEventListener('click', ()=>{
+      $('calcForm').reset();
+      $('results').style.display='none';
+    });
+
+    // small UX: press Enter to calculate when focused inside form
+    document.getElementById('calcForm').addEventListener('keyup', (e)=>{ if(e.key === 'Enter'){ calculate(); }});
+  </script>
+</body>
+</html>
