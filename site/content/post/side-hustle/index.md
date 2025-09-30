@@ -1,4 +1,7 @@
-# Maximize Your Side Hustle: Save Money and Know Your True Hourly Rate
+---
+title: "Maximize Your Side Hustle: Save Money and Know Your True Hourly Rate"
+date: 2025-09-01
+---
 
 Whether you’re freelancing, selling online, or running a small side business, every dollar counts. Many side hustlers focus on earning more but forget to **track expenses and optimize costs**—this can secretly shrink your profits.  
 
