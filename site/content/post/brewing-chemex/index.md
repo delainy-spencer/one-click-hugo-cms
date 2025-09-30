@@ -21,7 +21,7 @@ Your monthly savings rate is the foundation of everything else in personal finan
 ## 🧮 Try the Free Calculator
 Enter your income and expenses to see how much you can realistically save this month:
 
-<iframe src="site/static/calculators/savings.html" width="100%" height="400" frameborder="0"></iframe>
+<iframe src="calculators/savings.html" width="100%" height="400" frameborder="0"></iframe>
 
 ---
 
