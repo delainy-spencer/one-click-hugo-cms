@@ -8,3 +8,31 @@ enableGitInfo = true
 # Author info
 [author]
   name = "Delainy Spencer"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Blog"
+url = "/posts/"
+weight = 2
+
+[[menu.main]]
+name = "Calculators"
+url = "/calculators/"
+weight = 3
+
+[[menu.main]]
+name = "Resources"
+url = "/resources/"
+weight = 4
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 5
+
+[params]
+  footer = "© 2025 Scrappy Cents | Some links may be affiliate links. We may earn a commission at no extra cost to you."
