@@ -1,12 +1,65 @@
-baseurl = "/"
+
+# Base site settings
+baseURL = "https://yoursite.netlify.app/"
 languageCode = "en-us"
-languageLang = "en"
-title = "Kaldi"
+title = "Scrappy Cents"
+theme = "PaperMod"
+enableGitInfo = true
 
-# RSS, categories and tags disabled for an easy start
-# See configuration options for more details: 
-# https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+# Author info
+[author]
+  name = "Delainy Spencer"
+  homepage = "https://yoursite.netlify.app/"
 
+# Menu (navigation)
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "calculators"
+    name = "Calculators"
+    url = "/calculators/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "resources"
+    name = "Resources"
+    url = "/resources/"
+    weight = 4
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 5
+
+# PaperMod homepage parameters
 [params]
-images = ["img/og-image.jpg"]
+  homeInfoParams = { Title = "Welcome to Scrappy Cents", Content = "Tools, tips, and calculators to help you save money, pay off debt, and grow your side hustle." }
+
+  # Enable search and reading time (optional)
+  enableSearch = true
+  showReadingTime = true
+
+  # Footer info
+  footerContent = "© 2025 Scrappy Cents | Some links may be affiliate links. We may earn a commission at no extra cost to you."
+
+# Enable RSS
+[outputs]
+  home = ["HTML", "RSS"]
+
+# Optional: Social links
+[params.social]
+  twitter = "https://twitter.com/yourhandle"
+  linkedin = "https://linkedin.com/in/yourprofile"
