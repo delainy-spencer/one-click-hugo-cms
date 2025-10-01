@@ -3,63 +3,8 @@
 baseURL = "https://scrappy-cents.netlify.app/"
 languageCode = "en-us"
 title = "Scrappy Cents"
-theme = "Ananke"
 enableGitInfo = true
 
 # Author info
 [author]
   name = "Delainy Spencer"
-  homepage = "https://yoursite.netlify.app/"
-
-# Menu (navigation)
-[menu]
-
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
-
-  [[menu.main]]
-    identifier = "blog"
-    name = "Blog"
-    url = "/posts/"
-    weight = 2
-
-  [[menu.main]]
-    identifier = "calculators"
-    name = "Calculators"
-    url = "/calculators/"
-    weight = 3
-
-  [[menu.main]]
-    identifier = "resources"
-    name = "Resources"
-    url = "/resources/"
-    weight = 4
-
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 5
-
-# PaperMod homepage parameters
-[params]
-  homeInfoParams = { Title = "Welcome to Scrappy Cents", Content = "Tools, tips, and calculators to help you save money, pay off debt, and grow your side hustle." }
-
-  # Enable search and reading time (optional)
-  enableSearch = true
-  showReadingTime = true
-
-  # Footer info
-  footerContent = "© 2025 Scrappy Cents | Some links may be affiliate links. We may earn a commission at no extra cost to you."
-
-# Enable RSS
-[outputs]
-  home = ["HTML", "RSS"]
-
-# Optional: Social links
-[params.social]
-  twitter = "https://twitter.com/yourhandle"
-  linkedin = "https://linkedin.com/in/yourprofile"
