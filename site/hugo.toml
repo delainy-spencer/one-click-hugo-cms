@@ -1,9 +1,9 @@
 
 # Base site settings
-baseURL = "https://yoursite.netlify.app/"
+baseURL = "https://scrappy-cents.netlify.app/"
 languageCode = "en-us"
 title = "Scrappy Cents"
-theme = "PaperMod"
+theme = "Ananke"
 enableGitInfo = true
 
 # Author info
