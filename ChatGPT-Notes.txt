@@ -1,0 +1,33 @@
+1. Reframe the Goal
+
+Passive income from affiliate marketing isn’t really passive in the beginning. It’s like planting a garden—you prep the soil (site setup), plant seeds (content/tools), then wait for growth. The payoff comes later.
+
+Right now you’re in “seed planting” mode.
+
+2. Strip Down the Tech
+
+You don’t need everything fancy right away.
+
+Start with content. Blog posts with affiliate links are the foundation.
+
+Add calculators later (or even just link to a simple hosted version). You can frame them as “bonus tools” without stressing over integration.
+
+If Hugo + Netlify feels clunky, consider a more plug-and-play option like WordPress (with plugins), Ghost, or even Carrd + Gumroad/Notion embeds.
+
+3. Focus on Fast Wins
+
+Make 3–5 solid posts (each with one calculator or downloadable).
+
+Add a simple email opt-in (“Get my free calculator in your inbox”).
+
+Join 1–2 affiliate programs that actually match your content (don’t try to do everything at once).
+
+4. Lean on Templates + Tools
+
+I can make you ready-to-drop-in calculators in plain HTML files—then you just upload them and link/iframe them without touching Hugo’s guts too much.
+
+I can also give you a starter affiliate disclosure, privacy policy, and About page so your site looks legit quickly.
+
+👉 Here’s the mindset shift: You don’t need the “perfect, polished blog with calculators built in.” You just need something live that works. Every post + tool is an asset you can refine over time.
+
+Do you want me to sketch you the minimum viable setup (like “Day 1 version” of your blog that could already make money) so you don’t get bogged down in tech?
