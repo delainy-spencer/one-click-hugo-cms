@@ -1,6 +1,5 @@
 ---
 title: "Welcome to Scrappy Cents"
-
 ---
 
 subtitle: Scrappy Cents is your go-to blog for **saving money, getting out of debt, and building side hustles**.  
