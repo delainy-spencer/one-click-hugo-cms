@@ -1,7 +1,7 @@
 ---
 title: "Privacy Policy"
-date: 2025-10-01
-type: page
+subtitle: "How we handle your data"
+image: "/img/privacy-banner.jpg"
 ---
 
 At Scrappy Cents, we respect your privacy.

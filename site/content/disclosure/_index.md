@@ -1,7 +1,7 @@
 ---
-title: "Affiliate Disclosure"
-date: 2025-10-01
-type: page
+title: "Disclosure"
+subtitle: "Important affiliate information"
+image: "/img/disclosure-banner.jpg"
 ---
 
 Scrappy Cents is reader-supported. Some of the links on this site are affiliate links, which means that if you click on them and make a purchase, we may earn a commission — at no extra cost to you.
