@@ -1,20 +1,7 @@
 {{ define "main" }}
-  <!-- Blog Section -->
-  <section class="blog-section mw7 center ph3">
-    <h2>Latest Posts</h2>
-    <div class="blog-posts">
-      {{ range first 5 .Site.RegularPages }}
-        <article class="mb4">
-          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          <p>{{ .Summary }}</p>
-        </article>
-      {{ end }}
-    </div>
-  </section>
 
-  <!-- Email Subscribe Section -->
-  <section class="subscribe-section mw6 center ph3 mt5">
-    <h2>Subscribe to our Email List</h2>
-    {{ partial "newsletter-form.html" . }}
-  </section>
+{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+
+{{ partial "blog" . }}
+
 {{ end }}
