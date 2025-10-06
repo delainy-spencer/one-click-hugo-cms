@@ -60,7 +60,7 @@ Use this **free calculator** to figure out your actual hourly rate and see how m
 
 **Recommended Tool:**  
 
-Keep track of your side hustle hours and income with [this planner from Amazon](https://amzn.to/4mSZRvP){:target="_blank" rel="nofollow"}.
+Keep track of your side hustle hours and income with [this planner from Amazon](https://amzn.to/4mSZRvP)
 
 ## Final Tips for Maximizing Side Hustle Profits
 
