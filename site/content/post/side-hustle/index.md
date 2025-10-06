@@ -58,9 +58,11 @@ Use this **free calculator** to figure out your actual hourly rate and see how m
 
 ---
 
-**Recommended Tool:**  
+**Recommended Tools:**  
 
 Keep track of your side hustle hours and income with [this planner from Amazon](https://amzn.to/4mSZRvP)
+
+Optimize your workspace with [this ergonomic mouse from Logitech](https://amzn.to/3IHy0Rf)
 
 ## Final Tips for Maximizing Side Hustle Profits
 
@@ -70,6 +72,8 @@ Keep track of your side hustle hours and income with [this planner from Amazon](
 - **Invest in automation**: sometimes spending a little saves a lot of time  
 
 By optimizing costs and tracking your time, you can turn your side hustle into a **more profitable, efficient, and stress-free venture**.  
+
+Minimize stress with this [digital hour tracker](https://amzn.to/46W61oX)
 
 ---
 
