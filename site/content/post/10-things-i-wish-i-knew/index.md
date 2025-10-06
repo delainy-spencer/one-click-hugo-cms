@@ -1,8 +1,8 @@
-—
+——-
 title: “10 Things I Wish I Knew Before Starting My First Business”
 meta_description: “Starting a business? Here are 10 hard-earned lessons I wish I knew before launching — from cash flow to mindset, plus a free business cash flow calculator.”
 date: 2025-10-06
-—
+——-
 
 When I launched my first business, I thought I just needed a great idea, a website, and some motivation. What I actually needed was a better plan, clearer expectations, and a lot more patience.
 
