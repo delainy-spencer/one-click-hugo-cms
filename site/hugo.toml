@@ -1,6 +1,6 @@
 
 # Base site settings
-baseURL = "https://scrappy-cents.netlify.app/"
+baseURL = "https://scrappycents.com/"
 languageCode = "en-us"
 title = "Scrappy Cents"
 enableGitInfo = true
