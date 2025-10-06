@@ -1,0 +1,101 @@
+
+<form id="cashflow-form" onsubmit="event.preventDefault(); calculateCashflow();" style="max-width:720px; margin:0 auto;">
+  <fieldset style="border:1px solid #eee; padding:1rem; border-radius:8px;">
+    <legend style="font-weight:700;">Business Cash Flow Calculator</legend>
+
+
+<label for="monthly_revenue">Monthly Revenue (total)</label>
+<input id="monthly_revenue" name="monthly_revenue" type="number" step="0.01" min="0" placeholder="e.g. 3500" required style="width:100%; padding:8px; margin:6px 0 12px;">
+
+<label for="other_income">Other Monthly Income (optional)</label>
+<input id="other_income" name="other_income" type="number" step="0.01" min="0" placeholder="e.g. 200" style="width:100%; padding:8px; margin:6px 0 12px;">
+
+<label for="cogs">Monthly Cost of Goods Sold (COGS)</label>
+<input id="cogs" name="cogs" type="number" step="0.01" min="0" placeholder="e.g. 300" required style="width:100%; padding:8px; margin:6px 0 12px;">
+
+<label for="fixed_expenses">Monthly Fixed Expenses (rent, subscriptions, wages)</label>
+<input id="fixed_expenses" name="fixed_expenses" type="number" step="0.01" min="0" placeholder="e.g. 1500" required style="width:100%; padding:8px; margin:6px 0 12px;">
+
+<label for="variable_expenses">Monthly Variable Expenses (ads, shipping, misc)</label>
+<input id="variable_expenses" name="variable_expenses" type="number" step="0.01" min="0" placeholder="e.g. 200" style="width:100%; padding:8px; margin:6px 0 12px;">
+
+<label for="one_time_costs">One-time Startup Costs (optional)</label>
+<input id="one_time_costs" name="one_time_costs" type="number" step="0.01" min="0" placeholder="e.g. 2500" style="width:100%; padding:8px; margin:6px 0 12px;">
+
+<label for="cash_on_hand">Current Cash on Hand</label>
+<input id="cash_on_hand" name="cash_on_hand" type="number" step="0.01" min="0" placeholder="e.g. 5000" required style="width:100%; padding:8px; margin:6px 0 12px;">
+
+<div style="display:flex; gap:8px; margin-top:8px;">
+  <button type="submit" style="padding:10px 16px; border-radius:8px; border:0; background:#1f6feb; color:white; cursor:pointer;">Calculate</button>
+  <button type="button" onclick="document.getElementById(‘cashflow-form’).reset(); clearResults();" style="padding:10px 16px; border-radius:8px; border:1px solid #ddd; background:white; cursor:pointer;">Reset</button>
+</div>
+
+<div id="cashflow-results" aria-live="polite" style="margin-top:16px; padding:12px; border-radius:6px; background:#fafafa; border:1px solid #f0f0f0; display:none;"></div>
+
+  </fieldset>
+</form>
+
+
+<script>
+function formatMoney(num) {
+  return Number(num).toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+function clearResults() {
+  const el = document.getElementById(‘cashflow-results’);
+  el.style.display = ‘none’;
+  el.innerHTML = ‘’;
+}
+
+function calculateCashflow() {
+  const revenue = parseFloat(document.getElementById(‘monthly_revenue’).value) || 0;
+  const other = parseFloat(document.getElementById(‘other_income’).value) || 0;
+  const cogs = parseFloat(document.getElementById(‘cogs’).value) || 0;
+  const fixed = parseFloat(document.getElementById(‘fixed_expenses’).value) || 0;
+  const variableExp = parseFloat(document.getElementById(‘variable_expenses’).value) || 0;
+  const oneTime = parseFloat(document.getElementById(‘one_time_costs’).value) || 0;
+  const cash = parseFloat(document.getElementById(‘cash_on_hand’).value) || 0;
+
+  const totalIncome = revenue + other;
+  const totalMonthlyExpenses = cogs + fixed + variableExp;
+  const monthlyNet = totalIncome - totalMonthlyExpenses; // positive => cash increase
+
+  // months of runway = (cash - oneTime) / (-monthlyNet) if monthlyNet < 0
+  let runwayMonths = null;
+  if (monthlyNet >= 0) {
+    runwayMonths = Infinity;
+  } else {
+    const netAfterOneTime = cash - oneTime;
+    runwayMonths = netAfterOneTime <= 0 ? 0 : netAfterOneTime / Math.abs(monthlyNet);
+  }
+
+  // break-even revenue needed to reach monthlyNet = 0
+  const breakEvenRevenue = Math.max(0, totalMonthlyExpenses - other);
+
+  const resultsEl = document.getElementById('cashflow-results');
+resultsEl.style.display = 'block';
+resultsEl.innerHTML = `
+  <strong>Monthly summary</strong>
+  <p>Total monthly income: $${formatMoney(totalIncome)}</p>
+  <p>Total monthly expenses: $${formatMoney(totalMonthlyExpenses)}</p>
+  <p><strong>Monthly net cash flow:</strong> $${formatMoney(monthlyNet)} ${monthlyNet < 0 ? '(negative -- you\'re burning cash)' : '(positive -- you\'re adding cash)'}</p>
+  <p><strong>Break-even revenue (monthly):</strong> $${formatMoney(breakEvenRevenue)} <small>(total revenue needed to cover monthly expenses)</small></p>
+`;
+
+if (runwayMonths === Infinity) {
+  resultsEl.innerHTML += `<p><strong>Runway:</strong> Indefinite at current monthly net (you are cash-flow positive).</p>`;
+} else {
+  const monthsRounded = Math.floor(runwayMonths * 10) / 10; // one decimal
+  resultsEl.innerHTML += `<p><strong>Estimated runway:</strong> ${monthsRounded} months (based on current cash of $${formatMoney(cash)} minus one-time costs of $${formatMoney(oneTime)})</p>`;
+}
+
+// practical tips
+resultsEl.innerHTML += `
+  <hr>
+  <p style="margin:0;">Quick tips:</p>
+  <ul>
+    <li>Find ways to increase revenue or reduce variable costs to extend runway.</li>
+    <li>Prioritize essential fixed costs; pause or renegotiate non-essentials if needed.</li>
+    <li>Use this calculator monthly and when planning launches or hiring.</li>
+  </ul>
+`;
