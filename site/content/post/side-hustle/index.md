@@ -41,7 +41,6 @@ Many side hustlers **underestimate how much their time is worth**. Your hourly r
 
 **Formula:**  
 
-
 Knowing your true hourly rate helps you:  
 - Price your services fairly  
 - Decide whether a project is worth your time  
@@ -58,6 +57,10 @@ Use this **free calculator** to figure out your actual hourly rate and see how m
 *Tip: Enter your income, hours worked, and total expenses to get instant insight into your side hustle profitability.*  
 
 ---
+
+**Recommended Tool:**  
+
+Keep track of your side hustle hours and income with [this planner from Amazon](https://amzn.to/4mSZRvP){:target="_blank" rel="nofollow"}.
 
 ## Final Tips for Maximizing Side Hustle Profits
 
