@@ -3,6 +3,7 @@
 baseURL = "https://scrappycents.com/"
 languageCode = "en-us"
 title = "Scrappy Cents"
+subtitle = "I’m a former electrical engineer turned stay-at-home mom, using data-driven strategies to help families make smarter financial choices and grow side hustles."
 enableGitInfo = true
 
 # Author info
