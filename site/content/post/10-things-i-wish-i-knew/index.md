@@ -92,4 +92,4 @@ Use this calculator to estimate your monthly net cash flow and how many months y
 
 **How to use:** Enter your expected monthly revenue and recurring expenses. Add any one-time startup costs and your cash on hand to see an estimate of your runway.
 
-{{< calculator src=“/calculators/cashflow.html” >}}
+{{< calculator src=“calculators/cashflow.html” >}}

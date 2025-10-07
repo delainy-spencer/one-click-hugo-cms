@@ -52,7 +52,7 @@ Knowing your true hourly rate helps you:
 
 Use this **free calculator** to figure out your actual hourly rate and see how much you can save by switching to cheaper, functional products or services.  
 
-{{< calculator src="/calculators/side-hustle.html" >}}
+{{< calculator src="calculators/side-hustle.html" >}}
 
 *Tip: Enter your income, hours worked, and total expenses to get instant insight into your side hustle profitability.*  
 

@@ -52,7 +52,7 @@ The **Debt Avalanche** method focuses on **paying off debts with the highest int
 
 Use our interactive calculator to see how fast you could pay off your debts with each strategy. Enter your balances, interest rates, and monthly payments to compare.  
 
-{{< calculator src="/calculators/debt.html" >}}
+{{< calculator src="calculators/debt.html" >}}
 
 ---
 
