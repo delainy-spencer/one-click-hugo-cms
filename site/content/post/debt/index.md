@@ -20,6 +20,9 @@ The **Debt Snowball** method focuses on **paying off your smallest debts first**
 - Quick wins keep you motivated.  
 - You get psychological momentum by crossing debts off your list.  
 
+**My Favorite Tool:**
+Try this [debt payoff planner](https://amzn.to/4q7DXrB) for tracking even the smallest debt and getting rid of it!
+
 ---
 
 ## What is the Debt Avalanche Method?
@@ -53,6 +56,8 @@ The **Debt Avalanche** method focuses on **paying off debts with the highest int
 Use our interactive calculator to see how fast you could pay off your debts with each strategy. Enter your balances, interest rates, and monthly payments to compare.  
 
 {{< calculator src="calculators/debt.html" >}}
+
+If you enjoyed using this calculator, please check out this [financial workbook](https://amzn.to/3L0ps8D) on Amazon. It will help you finally achieve financial freedom!
 
 ---
 
