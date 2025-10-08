@@ -6,8 +6,6 @@ date: 2025-10-07
 tags: ["family finance", "budgeting", "money saving tips", "data-driven", "parents"]
 ---
 
-# 5 Data-Backed Ways Parents Can Save $500 a Month
-
 Parenting is expensive — but not *unmanageable*. As a former electrical engineer turned stay-at-home mom, I approach saving money like solving an equation.
 
 Here are five *data-backed strategies* that real families (including mine!) use to consistently save around **$500 a month** without feeling deprived or overwhelmed.
@@ -28,7 +26,7 @@ Once you visualize your data, you’ll spot “leaks” instantly: unused subscr
 
 **Pro tip:** I use color-coded tracking in my family expense spreadsheet so I can see at a glance which categories are climbing.
 
-I use a (simple budget planner notebook)[https://amzn.to/4h0QJnj] to jot down daily spending and monthly totals; it's easier to stick with than a complex app, and seeing numbers on paper helps me spot spending patterns fast. This one has built-in monthly review pages, so you can track progress without starting from scratch each month.
+I use a [simple budget planner notebook](https://amzn.to/4h0QJnj) to jot down daily spending and monthly totals; it's easier to stick with than a complex app, and seeing numbers on paper helps me spot spending patterns fast. This one has built-in monthly review pages, so you can track progress without starting from scratch each month.
 
 ---
 
@@ -43,7 +41,7 @@ Food is one of the easiest areas to overspend. Research from the USDA shows the 
 - Batch cook or freeze extras to reduce waste  
 
 **Try this:**  
-Keep a “Data Dinner Log” — list your top 10 budget-friendly meals, the per-meal cost, and how long they take. Over time, you’ll see which meals give the best *ROI for your time and money.*
+Keep a “Data Dinner Log” — list your top 10 budget-friendly meals, the per-meal cost, and how long they take. Over time, you’ll see which meals give the best *ROI for your time and money.* My favorite log book for family meal planning is [this one from Amazon](https://amzn.to/3KFCkRK).
 
 ---
 
