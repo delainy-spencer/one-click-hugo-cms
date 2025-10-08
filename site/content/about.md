@@ -34,7 +34,7 @@ Whether you’re tracking your side hustle profits, organizing your family budge
 
 ## 🚀 Start Here
 If you’re new to *Scrappy Cents*, here are a few great places to begin:  
-- [10 Things I Wish I Knew Before Starting My First Business](https://scrappycents.com/posts/10-things-i-wish-i-knew-before-starting-my-first-business)  
+- [10 Things I Wish I Knew Before Starting My First Business](https://www.scrappycents.com/post/10-things-i-wish-i-knew/)  
 - [Calculate Your Side Hustle Hourly Rate](https://www.scrappycents.com/post/side-hustle/)  
 - [Smart Family Budgeting for Busy Parents](#) *(coming soon)*  
 
