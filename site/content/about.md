@@ -4,7 +4,7 @@ subtitle: "Learn how Delainy, a former electrical engineer turned stay-at-home m
 ---
 
 # Hi, I’m Delainy!
-*A former electrical engineer turned stay-at-home mom who loves a good spreadsheet.*
+*Mom of two, former electrical engineer, Python coder, and baker. I share clever life hacks, mom chaos moments, and practical tools to save time and sanity.*
 
 When I left engineering to raise my kids, I quickly realized that managing a household budget and running a small business both require efficient systems that actually work. My husband runs his own business, and I handle all the **accounting in QuickBooks**, tracking expenses, income, and goals with the same data-driven mindset I used in engineering.  
 
