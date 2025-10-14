@@ -13,5 +13,50 @@
     {{ with $script.js }}
       <script src="{{ relURL . }}"></script>
     {{ end }}
+    
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+<script>
+      let auth0 = null;
+
+      async function configureClient() {
+        auth0 = await createAuth0Client({
+          domain: "dev-t203nmgj43406ruf.auth0.com",
+          client_id: "YOUR_CLIENT_ID",
+          authorizationParams: {
+          redirect_uri: window.location.origin
+          }
+        });
+       }
+
+       configureClient();
+
+document.addEventListener("DOMContentLoaded", async () => {
+    await configureClient();
+
+    if (window.location.search.includes("code=") && window.location.search.includes("state=")) {
+      await auth0.handleRedirectCallback();
+      window.history.replaceState({}, document.title, "/");
+    }
+
+    const user = await auth0.getUser();
+
+    if (user) {
+      document.querySelector("#login-btn")?.classList.add("hidden");
+      document.querySelector("#logout-btn")?.classList.remove("hidden");
+      document.querySelector("#user-info").textContent = `👋 Hi, ${user.name}`;
+    } else {
+      document.querySelector("#login-btn")?.classList.remove("hidden");
+      document.querySelector("#logout-btn")?.classList.add("hidden");
+    }
+  });
+
+  async function login() {
+    await auth0.loginWithRedirect();
+  }
+
+  function logout() {
+    auth0.logout({ logoutParams: { returnTo: window.location.origin } });
+  }
+    </script>
   </body>
 </html>
