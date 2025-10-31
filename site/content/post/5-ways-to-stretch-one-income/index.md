@@ -3,7 +3,7 @@ title: "5 Smart Ways to Stretch One Income (Without Feeling Deprived)"
 date: 2025-10-26
 description: "Learn how to stretch one income with data-driven money systems, smart meal planning, and realistic side hustles that fit family life."
 keywords: ["family finance", "budgeting on one income", "frugal living tips", "stay at home mom budgeting", "how to save money", "smart side hustles", "data driven budgeting"]
-draft: true
+draft: false
 ---
 
 Living on one income can feel impossible these days — but with a few smart systems, it doesn’t have to.  
@@ -19,8 +19,8 @@ You can’t optimize what you don’t measure — and that’s true for money, t
 Start by tracking your expenses for one month. Don’t worry about fancy software; even a simple spreadsheet or app will do.
 
 Try:  
-- 📱 [YNAB (You Need A Budget)](https://www.amazon.com/s?k=YNAB+book&tag=YOURAFFID) – a budgeting method that helps you give every dollar a job.  
-- 📖 [The Budget Mom’s Budget by Paycheck Workbook](https://www.amazon.com/s?k=budget+by+paycheck&tag=YOURAFFID) – great for those who prefer pen and paper tracking.
+- 📱 [YNAB (You Need A Budget)](https://amzn.to/3L7iCi0) – a budgeting method that helps you give every dollar a job.  
+- 📖 [Budget Planner - Monthly Budget Book](https://amzn.to/43CVTjX) – great for those who prefer pen and paper tracking.
 
 Once you know where your money goes, you can make intentional tweaks — like setting automatic transfers to savings or trimming unused subscriptions.
 
@@ -37,8 +37,8 @@ Each week, I create a quick meal plan around what’s on sale and what we alread
 - Always have a few “lazy night” dinners ready — like frozen pizzas or soup and sandwiches — to avoid last-minute spending.
 
 Helpful tools:  
-- 🍲 [Crock-Pot 7-Quart Programmable Slow Cooker](https://www.amazon.com/s?k=slow+cooker&tag=YOURAFFID)  
-- 🥫 [Meal Planning Notepad](https://www.amazon.com/s?k=meal+planning+pad&tag=YOURAFFID)
+- 🍲 [Crock-Pot 7-Quart Programmable Slow Cooker](https://amzn.to/4nQh75v)  
+- 🥫 [Meal Planning Notepad](https://amzn.to/4nCQHnv)
 
 ---
 
@@ -53,8 +53,8 @@ Instead, invest in items that last and have good resale value.
 - Look for refurbished electronics with warranties instead of new ones.
 
 A few of my favorite quality-over-quantity staples:  
-- 👕 [Hanes Women’s Perfect-T Crewneck T-Shirt (2-Pack)](https://www.amazon.com/s?k=hanes+t+shirt+women&tag=YOURAFFID)  
-- 🍳 [Lodge Cast Iron Skillet](https://www.amazon.com/s?k=lodge+cast+iron+skillet&tag=YOURAFFID)
+- 👕 [Amazon Essentials Women's Regular-Fit Short-Sleeve Crewneck T-Shirt (2-Pack)](https://amzn.to/3L91N6j)  
+- 🍳 [Lodge Cast Iron Skillet](https://amzn.to/4hyt4Lo)
 
 ---
 
@@ -69,8 +69,8 @@ The key is finding something you can do **from home, on your schedule**, without
 - Offer digital services — proofreading, Pinterest management, or virtual assisting.
 
 Helpful gear to make side hustling easier:  
-- 💻 [Blue Yeti USB Microphone](https://www.amazon.com/s?k=blue+yeti+microphone&tag=YOURAFFID) – great for voiceovers or YouTube.  
-- 📸 [Adjustable Ring Light with Phone Holder](https://www.amazon.com/s?k=ring+light+with+tripod&tag=YOURAFFID)
+- 💻 [Blue Yeti USB Microphone](https://amzn.to/48VRdcx) – great for voiceovers or YouTube.  
+- 📸 [Adjustable Ring Light with Phone Holder](https://amzn.to/43N7c9k)
 
 ---
 
@@ -82,7 +82,7 @@ Set up automatic bill payments, savings transfers, and even grocery deliveries t
 **Examples:**
 - Automate a $25 transfer to savings each payday.  
 - Schedule bills right after your paycheck hits.  
-- Use [Subscribe & Save](https://www.amazon.com/s?k=subscribe+and+save&tag=YOURAFFID) on Amazon for diapers, snacks, and household goods you always need — and save up to 15%.
+- Use Subscribe & Save on Amazon for [diapers](https://amzn.to/4nznlXb), snacks, and household goods you always need — and save up to 15%.
 
 Automation removes emotion from financial decisions — so saving becomes the default, not the exception.
 
